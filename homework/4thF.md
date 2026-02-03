@@ -1,6 +1,6 @@
 If $L$ is Regular, then $L^*$ is Regular
 
-Proof 
+Proof
 
 Regular languages are exactly the languages described by regular expressions. The class of regular languages:
 
@@ -55,8 +55,8 @@ $$
 
 with:
 
-- $|xy|\le p$  
-- $|y|\ge1$  
+- $|xy|\le p$
+- $|y|\ge1$
 - $xy^iz\in L$ for all $i\ge0$
 
 Let $|y|=k\ge1$. Pump down ($i=0$):
@@ -68,7 +68,7 @@ $$
 But:
 
 $$
-2^{p-1} < 2^p-k < 2^p,
+2^{p-1} < 2^{p}-k < 2^{p},
 $$
 
 so $2^p-k$ is strictly between two powers of 2, hence not a power of 2.
@@ -110,4 +110,3 @@ L^*=a^*,
 $$
 
 which is regular.
-
