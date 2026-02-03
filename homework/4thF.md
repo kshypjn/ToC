@@ -44,7 +44,7 @@ Assume $L$ is regular with pumping length $p$.
 let:
 
 $$
-s=a^{2^p}\in L.
+s=a^{2^{p}}\in L.
 $$
 
 By the Pumping Lemma:
