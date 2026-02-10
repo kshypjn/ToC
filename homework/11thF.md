@@ -5,7 +5,7 @@ need to show $\lbrace\varepsilon\rbrace \cup R \cdot R^* = R^*$.
 
 $R^* = \lbrace\varepsilon\rbrace \cup R \cup R^2 \cup R^3 \cup \cdots$
 
-**Direction 1:** Show $\lbrace\varepsilon\rbrace \cup R \cdot R^* \subseteq R^*$
+**Direction 1:** Show $$\lbrace\varepsilon\rbrace \cup R \cdot R^* \subseteq R^*$$
 
 - Clearly $\lbrace\varepsilon\rbrace \subseteq R^*$ since $\varepsilon \in R^*$ by definition
 - For $R \cdot R^*$: any string in $R \cdot R^*$ has the form $w = w_1 w_2$ where $w_1 \in R$ and $w_2 \in R^*$
