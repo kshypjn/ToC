@@ -22,4 +22,3 @@ A string is in $(ab)^*$ if and only if it does not contain:
 - Odd length
 
 The first three conditions ensure alternation between $a$ and $b$. The fourth ensures the pattern starts with $a$ (if non-empty) and has even length.
-
