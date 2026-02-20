@@ -37,7 +37,7 @@ Uniqueness of Solution
 
 We'll show that if a solution exists, it's unique using a fixed-point argument.
 
-Key idea: Think of the system as defining a function $F: (\mathcal{P}(\Sigma^*))^n \to (\mathcal{P}(\Sigma^*))^n$ that maps an $n$-tuple of languages to another $n$-tuple by evaluating the right-hand sides.
+Key idea: Think of the system as defining a function $F:(\mathcal{P}(\Sigma^*))^n \to (\mathcal{P}(\Sigma^*))^n$ that maps an $n$-tuple of languages to another $n$-tuple by evaluating the right-hand sides.
 
 A solution is a fixed point of $F$, i.e., $(L_1, \ldots, L_n)$ such that $F(L_1, \ldots, L_n) = (L_1, \ldots, L_n)$.
 
@@ -88,26 +88,19 @@ For each variable $X_i$, we create a non-terminal $S_i$ in our grammar.
 For each equation $X_i = f_i(X_1, \ldots, X_n)$, we translate the polynomial expression $f_i$ into production rules:
 
 1. Finite constant languages: If $L = \{w_1, w_2, \ldots, w_k\}$ appears in the expression, add productions:
-   $$
-   S_i \to w_1 \mid w_2 \mid \cdots \mid w_k
-   $$
+   $$S_i \to w_1 \mid w_2 \mid \cdots \mid w_k$$
    (where we treat each $w_j$ as a terminal string)
 
 2. Concatenation: If the expression contains $L \cdot X_j$ (where $L$ is finite), add productions:
-   $$
-   S_i \to w_1 S_j \mid w_2 S_j \mid \cdots \mid w_k S_j
-   $$
+   $$S_i \to w_1 S_j \mid w_2 S_j \mid \cdots \mid w_k S_j$$
    for each $w_\ell \in L$.
 
 3. Union: If the expression is $A \cup B$, we include productions from both $A$ and $B$.
 Example: If $X = \{a\} \cup \{b\} \cdot X \cup \{c\} \cdot X \cdot X$, then:
-$$
-\begin{align}
-S &\to a \\
-S &\to bS \\
-S &\to cSS
-\end{align}
-$$
+S → a  
+S → bS  
+S → cSS
+\]
 
 This grammar generates exactly the language $X$.
 
