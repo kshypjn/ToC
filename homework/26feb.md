@@ -30,9 +30,9 @@ We encode this on the tape of $M'$ as follows:
 
 So the tape of $M'$ looks conceptually like
 
-$
+$$
 \#\; \ldots a \,{b}\, c \ldots \; \#\; \ldots {d} e \ldots \; \# \ldots
-$
+$$
 
 The control state $q$ of $M$ is stored in the finite control of $M'$. Thus each configuration of $M$ corresponds to exactly one configuration of $M'$.
 
@@ -42,10 +42,10 @@ The control state $q$ of $M$ is stored in the finite control of $M'$. Thus each 
 
 Suppose the transition function of $M$ is
 
-$
+$$
 \delta(q, a_1, a_2, \ldots, a_k)
   = (q', b_1, b_2, \ldots, b_k, d_1, d_2, \ldots, d_k),
-$
+$$
 
 where $a_i$ is the symbol currently under head $i$, $b_i$ is the symbol to be written, and $d_i \in \{L, R, S\}$ is the head movement on tape $i$.
 
@@ -56,9 +56,9 @@ To simulate one step of $M$, the single-tape machine $M'$ does the following:
 
 2. Compute the transition:  
    Knowing $(q, a_1, \ldots, a_k)$, $M'$ uses its transition function (hard-wired in its finite control) to determine
-   $
+   $$
    (q', b_1, \ldots, b_k, d_1, \ldots, d_k).
-   $
+   $$
 
 3. Right-to-left scan (or another full scan):  
    $M'$ now makes another scan over its tape. When it encounters ${a_i}$ in block $i$:
@@ -88,21 +88,21 @@ Our encoding for $M'$ adds:
 
 Therefore, at any point in the simulation, the used portion of the single tape of $M'$ has length
 
-$
+$$
 O(T(n)).
-$
+$$
 
 For each simulated step of $M$, $M'$ performs a constant number of full scans of this portion, so simulating one step of $M$ takes time
 
-$
+$$
 O(T(n)).
-$
+$$
 
 Since $M$ runs for at most $T(n)$ steps, the total running time of $M'$ on an input of length $n$ is
 
-$
+$$
 T(n) \cdot O(T(n)) = O(T(n)^2).
-$
+$$
 
 ---
 
@@ -110,8 +110,8 @@ $
 
 We have described a deterministic single-tape Turing machine $M'$ that simulates the given deterministic $k$-tape Turing machine $M$. The simulation preserves acceptance and rejection of all inputs, and the running time satisfies
 
-$
+$$
 T_{M'}(n) = O(T(n)^2).
-$
+$$
 
 Thus, any deterministic $k$-tape TM running in time $T(n)$ can be simulated by a deterministic single-tape TM in time $O(T(n)^2)$
