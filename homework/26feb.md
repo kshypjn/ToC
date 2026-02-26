@@ -24,15 +24,13 @@ A configuration of $M$ consists of:
 
 We encode this on the tape of $M'$ as follows:
 
-- The tape of $M'$ is divided into $k$ blocks, one for each tape of $M$, separated by a special symbol $\#$.
+- The tape of $M'$ is divided into $k$ blocks, one for each tape of $M$, separated by a special symbol `#`.
 - Inside each block we store the contents of that tape.
 - To record the head position in a block, we use a marked version of the tape symbols: for every symbol $a$ of $M$ we add a dotted version ${a}$ to the alphabet of $M'$. In each block there is exactly one dotted symbol, and that cell is where the head of that tape currently is.
 
 So the tape of $M'$ looks conceptually like
 
-$$
-\#\; \ldots a \,{b}\, c \ldots \; \#\; \ldots {d} e \ldots \; \# \ldots
-$$
+`# … a b c … # … d e … # …`
 
 The control state $q$ of $M$ is stored in the finite control of $M'$. Thus each configuration of $M$ corresponds to exactly one configuration of $M'$.
 
@@ -83,7 +81,7 @@ During a computation of length $T(n)$:
 
 Our encoding for $M'$ adds:
 
-- a constant number of separator symbols $\#$,
+- a constant number of separator symbols `#`,
 - and only a constant factor more symbols for dotted versions.
 
 Therefore, at any point in the simulation, the used portion of the single tape of $M'$ has length
