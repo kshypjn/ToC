@@ -4,7 +4,7 @@
 2. $L$ is not accepted by any 1-counter machine (and hence not by any pushdown automaton).
 
 
-
+---
 1. A 2-counter machine for $L$
 
 A 2-counter machine consists of a finite control plus two nonnegative integer registers $C_1, C_2$. The operations allowed are increment, decrement (when nonzero), and test for zero.
