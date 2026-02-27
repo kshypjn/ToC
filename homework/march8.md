@@ -13,7 +13,7 @@ just build a universal Turing machine $U$. on input $\langle M, w \rangle$:
 
 that's it. if $M$ halts on $w$, then $U$ will eventually reach that point and accept. if $M$ loops forever on $w$, then $U$ loops forever too — it never accepts but it never explicitly rejects either.
 
-so $U$ semi-decides $H$, which means $H$ is recursively enumerable. $\square$
+so $U$ semi-decides $H$, which means $H$ is recursively enumerable. 
 
 ---
 
