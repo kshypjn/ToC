@@ -5,7 +5,7 @@ $$\epsilon, 0, 1, 00, 01, 10, 11, 000, \ldots$$
 
 since every TM corresponds to at least one finite string encoding, and the set of finite strings is countable, the set of all Turing machines is also countable. formally:
 
-$$|\{\text{Turing machines}\}| = \aleph_0$$
+$$|\{\text{Turing machines}\}| = \mathbb{N}$$
 
 so we can write all TMs as a list $M_1, M_2, M_3, \ldots$
 
@@ -27,7 +27,7 @@ $$\chi_L = (b_1, b_2, b_3, \ldots) \quad \text{where } b_i = 1 \iff s_i \in L$$
 
 the set of all such infinite binary sequences is $\{0,1\}^{\mathbb{N}}$, and by Cantor's diagonal argument this set is uncountable. so:
 
-$$|\mathcal{P}(\Sigma^*)| = |\{0,1\}^{\mathbb{N}}| = 2^{\aleph_0} > \aleph_0$$
+$$|\mathcal{P}(\Sigma^*)| = |\{0,1\}^{\mathbb{N}}| = 2^{\mathbb{N}} > \mathbb{N}$$
 
 ---
 
@@ -49,11 +49,11 @@ then $d$ differs from every $r_i$ in at least the $i$-th position, so $d$ is not
 
 each Turing machine $M$ recognizes exactly one language $L(M) \subseteq \Sigma^*$. so the set of recursively enumerable (RE) languages has size at most the number of Turing machines, which is countable:
 
-$$|\{\text{RE languages}\}| \leq |\{\text{Turing machines}\}| = \aleph_0$$
+$$|\{\text{RE languages}\}| \leq |\{\text{Turing machines}\}| = \mathbb{N}$$
 
-but the set of all languages has size $2^{\aleph_0}$, which is strictly greater:
+but the set of all languages has size $2^{\mathbb{N}}$, which is strictly greater:
 
-$$|\{\text{all languages}\}| = 2^{\aleph_0} > \aleph_0$$
+$$|\{\text{all languages}\}| = 2^{\mathbb{N}} > \mathbb{N}$$
 
 so there are strictly more languages than there are Turing machines. this means:
 
