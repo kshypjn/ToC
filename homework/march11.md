@@ -40,6 +40,6 @@ Define a Turing machine $D$ that on input $\langle M\rangle$ does:
 
 If there exists some string $x$ such that $M$ accepts $x$, then for large enough $k$ the simulation of $M$ on $x$ will have been carried out for at least the number of steps in the real accepting computation, so $D$ will eventually see $M$ accept $x$ and will accept $\langle M\rangle$. Thus $\langle M\rangle\in\overline{L}$ implies $D$ accepts.
 
-If $L(M)=\emptyset$, then $M$ never accepts any input, so $D$ never sees an accepting computation and therefore never accepts $\langle M\rangle$; it runs forever. Thus $D$ semi-decides $\overline{L}$.
+If $L(M)=\emptyset$, then $M$ never accepts any input, so $D$ never sees an accepting computation and therefore never accepts $\langle M\rangle$; it runs forever. 
 
 Therefore $\overline{L}$ is in RE, so $L$ is in co-RE.
