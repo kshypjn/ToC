@@ -1,48 +1,32 @@
-We are given the language
-$$
-L=\{\langle M\rangle \mid L(M)=\emptyset\}
-$$
-over descriptions of Turing machines $M$.
+We are given the language $L=\{\langle M\rangle \mid L(M)=\emptyset\}$ over descriptions of Turing machines $M$.
 
 1. $L$ is not in RE.
 
 Recall that
-$$
-HALT=\{\langle M,w\rangle \mid M \text{ halts on input } w\}
-$$
+$HALT=\{\langle M,w\rangle \mid M \text{ halts on input } w\}$
 is RE-complete and not decidable, and that its complement
-$$
-\overline{HALT}=\{\langle M,w\rangle \mid M \text{ does not halt on input } w\}
-$$
+$\overline{HALT}=\{\langle M,w\rangle \mid M \text{ does not halt on input } w\}$
 is not in RE (otherwise both $HALT$ and $\overline{HALT}$ would be in RE, so $HALT$ would be decidable).
 
 We reduce $\overline{HALT}$ to $L$. Given an input $\langle M,w\rangle$, we effectively construct a Turing machine $N$ such that
-$$
-L(N)=\emptyset \iff M \text{ does not halt on } w.
-$$
+$L(N)=\emptyset \iff M \text{ does not halt on } w.$
 
 Definition of $N$ on input $x$:
 
 1. Ignore $x$ and simulate $M$ on input $w$.
 2. If the simulation ever halts (accepting or rejecting), then immediately accept $x$.
 
-Now analyze $L(N)$.
-
 - If $M$ does not halt on $w$, then in the computation of $N$ on any input $x$, step 1 never finishes, so $N$ never reaches the accepting step. Hence $N$ never accepts any input, so $L(N)=\emptyset$.
 - If $M$ does halt on $w$, then for every input $x$, the simulation in step 1 eventually finishes, and then $N$ accepts $x$. So $L(N)=\Sigma^*$ is nonempty.
 
 Therefore
-$$
-\langle M,w\rangle \in \overline{HALT} \iff L(N)=\emptyset \iff \langle N\rangle \in L.
-$$
+$\langle M,w\rangle \in \overline{HALT} \iff L(N)=\emptyset \iff \langle N\rangle \in L.$
 Thus there is a many-one reduction $\overline{HALT} \le_m L$. If $L$ were in RE, then $\overline{HALT}$ would also be in RE, which is impossible. Hence $L$ is not in RE.
 
 2. $L$ is in co-RE.
 
 To show that $L$ is in co-RE, it suffices to show that its complement
-$$
-\overline{L}=\{\langle M\rangle \mid L(M)\neq\emptyset\}
-$$
+$\overline{L}=\{\langle M\rangle \mid L(M)\neq\emptyset\}$
 is in RE, i.e., there is a Turing machine that semi-decides $\overline{L}$.
 
 Idea: on input $\langle M\rangle$, we want to eventually accept if $M$ accepts at least one string, and otherwise run forever. We can do this by dovetailing over all possible inputs to $M$.
