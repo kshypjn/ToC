@@ -3,7 +3,7 @@ A RAM has a finite program, a program counter, and registers $R_0, R_1, R_2, \ld
 We simulate this RAM on a multi-tape Turing machine (which is equivalent to a single-tape TM):
 
 - Use one tape (or a fixed number of tapes) to store the program and the program counter.
-- Encode register contents on the tape, e.g. register $i$ holds $n$ by a block of the form $\#i\#a^n\#$ or by storing the pair $(i, n)$ in a list. With a suitable encoding, the tape alphabet is finite.
+- Encode register contents on the tape, e.g. register $i$ holds $n$ by a block of the form #$i$#a<sup>$n$</sup># or by storing the pair $(i, n)$ in a list. With a suitable encoding, the tape alphabet is finite.
 
 One step of the RAM (fetch instruction, decode, update registers and program counter) can be carried out by moving the TM head(s), rewriting symbols, and changing state. Each RAM instruction uses only finitely many TM steps. So the whole RAM computation is simulated step-by-step by the TM. Thus any function computable by a RAM is computable by a TM, and hence by a UTM (by giving it the encoding of that TM and the input).
 
