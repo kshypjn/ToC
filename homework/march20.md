@@ -20,7 +20,7 @@ Computing $L_1 / L_2$: $x \in L_1 / L_2$ iff there exists $y \in L_2$ with $xy \
 - If $x = a^n$, then $xy = a^n b^j c^j$. This is in $L_1$ from the second part (take $m = j$). So $a^* \subseteq L_1 / L_2$.
 - If $x = a^n b^k$ with $0 \leq k \leq n$, take $y = b^{n-k} c^{n-k}$ (so $j = n - k \geq 0$). Then $xy = a^n b^n c^{n-k}$, which is in the first part of $L_1$. So $\{ a^n b^k \mid 0 \leq k \leq n \} \subseteq L_1 / L_2$.
 - No other form of $x$ can have $xy \in L_1$ for some $y = b^j c^j$, so
-$
+  $
 L_1 / L_2 = a^* \cup \{ a^n b^k \mid 0 \leq k \leq n \}.
 $
 

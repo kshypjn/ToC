@@ -4,9 +4,7 @@ Take the alphabet $\Sigma = \{a\}$. So every string is of the form $a^n$ for som
 We encode natural numbers by length: $n$ is represented by the string $a^n$. Fix a standard listing of all Turing machines $M_0, M_1, M_2, \ldots$ (e.g. by encoding TMs as strings and ordering by length, then lexicographically).
 
 Define
-$$
-K = \{ i \in \mathbb{N} \mid M_i \text{ halts on input } \epsilon \}.
-$$
+$K = \{ i \in \mathbb{N} \mid M_i \text{ halts on input } \epsilon \}$
 This is the halting set: the set of indices of TMs that halt on the empty string. It is a standard result that $K$ is undecidable.
 
 Define the language over $\Sigma$:
