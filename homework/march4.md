@@ -9,7 +9,7 @@ a normal TM just accepts or rejects. an output TM does the same thing but when i
 
 input: a unary number, so $n$ is represented as $n$ ones. for example:
 
-$$n = 5 \implies w = 11111$$
+$n = 5 \implies w = 11111$
 
 output: $n$ in binary. so for $n = 5$ we want $w' = 101$
 
@@ -26,7 +26,7 @@ but a TM with a single tape makes this messy. so lets think of it more simply:
 
 we use the tape to separate regions. the tape will look like:
 
-$$\underbrace{1 \cdots 1}_{\text{remaining unary}} \# \underbrace{b_k \cdots b_0}_{\text{binary digits (LSB first)}}$$
+$\underbrace{1 \cdots 1}_{\text{remaining unary}} \# \underbrace{b_k \cdots b_0}_{\text{binary digits (LSB first)}}$
 
 the $\#$ acts as a separator.
 
@@ -64,21 +64,21 @@ $q_{accept}$ — clean up the $\#$ and accept, leaving just the binary string on
 
 scan left to right over the unary block toggling state:
 
-$$\delta(q_{even}, 1) = (q_{odd}, 1, R)$$
-$$\delta(q_{odd}, 1) = (q_{even}, 1, R)$$
+$\delta(q_{even}, 1) = (q_{odd}, 1, R)$
+$\delta(q_{odd}, 1) = (q_{even}, 1, R)$
 
 when we hit $\#$:
 
-$$\delta(q_{even}, \#) = (q_{write0}, \#, R)$$
-$$\delta(q_{odd}, \#) = (q_{write1}, \#, R)$$
+$\delta(q_{even}, \#) = (q_{write0}, \#, R)$
+$\delta(q_{odd}, \#) = (q_{write1}, \#, R)$
 
 ### phase 2 — write binary digit
 
 move right past any existing binary digits to the first blank, write the new digit:
 
-$$\delta(q_{write0}, 0) = (q_{write0}, 0, R)$$
-$$\delta(q_{write0}, 1) = (q_{write0}, 1, R)$$
-$$\delta(q_{write0}, \sqcup) = (q_{halve}, 0, L) \quad \text{then rewind left}$$
+$\delta(q_{write0}, 0) = (q_{write0}, 0, R)$
+$\delta(q_{write0}, 1) = (q_{write0}, 1, R)$
+$\delta(q_{write0}, \sqcup) = (q_{halve}, 0, L) \quad \text{then rewind left}$
 
 same for $q_{write1}$ but writes $1$.
 

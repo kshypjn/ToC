@@ -1,6 +1,6 @@
 (i) $L_1 = \{w \in \Sigma^* \mid w \text{ contains at least one } a\}$
 
-$$\boxed{\Sigma^* \cdot a \cdot \Sigma^*}$$
+$\boxed{\Sigma^* \cdot a \cdot \Sigma^*}$
 
 This expression matches any string with at least one $a$ anywhere: (any string) followed by $a$ followed by (any string).
 **Examples:**
@@ -12,7 +12,7 @@ This expression matches any string with at least one $a$ anywhere: (any string) 
 (ii) $L_2 = (ab)^* = \{\epsilon, ab, abab, ababab, \ldots\}$
 :
 
-$$\boxed{\overline{\Sigma^* \cdot aa \cdot \Sigma^* \cup \Sigma^* \cdot bb \cdot \Sigma^* \cup \Sigma^* \cdot ba \cdot \Sigma^* \cup \Sigma \cdot (\Sigma\Sigma)^*}}$$
+$\boxed{\overline{\Sigma^* \cdot aa \cdot \Sigma^* \cup \Sigma^* \cdot bb \cdot \Sigma^* \cup \Sigma^* \cdot ba \cdot \Sigma^* \cup \Sigma \cdot (\Sigma\Sigma)^*}}$
 
 A string is in $(ab)^*$ if and only if it does not contain:
 

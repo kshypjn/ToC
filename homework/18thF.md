@@ -1,8 +1,8 @@
 constructing a standard DFA $M'$ that simulates $M$ step-by-step.
-$$M = (Q,\, \Sigma,\, \Gamma,\, k,\, \delta,\, q_0,\, A_0,\, F)$$
+$M = (Q,\, \Sigma,\, \Gamma,\, k,\, \delta,\, q_0,\, A_0,\, F)$
 Define:
 
-$$M' \;=\; (Q',\; \Sigma,\; \delta',\; q_0',\; F')$$
+$M' \;=\; (Q',\; \Sigma,\; \delta',\; q_0',\; F')$
 
 with components:
 
@@ -27,13 +27,13 @@ Proof by induction on $i$
 
 - **Inductive step:** Assume the state of $M'$ after reading $a_1 \cdots a_i$ is $(q_i, A_i)$. On reading $a_{i+1}$:
 
-$$\delta'\bigl((q_i, A_i),\; a_{i+1}\bigr) \;=\; (q_{i+1}, A_{i+1})$$
+$\delta'\bigl((q_i, A_i),\; a_{i+1}\bigr) \;=\; (q_{i+1}, A_{i+1})$
 
 where $(q_{i+1}, A_{i+1}) = \delta(q_i,\, a_{i+1},\, A_i)$, which is exactly how $M$ transitions. 
 
 **Acceptance equivalence.** After reading all of $w$, $M'$ is in state $(q_n, A_n)$. By definition of $F'$:
 
-$$(q_n, A_n) \in F' \iff q_n \in F$$
+$(q_n, A_n) \in F' \iff q_n \in F$
 
 Therefore $M'$ accepts $w$ if and only if $M$ accepts $w$, so $L(M') = L(M)$.
 

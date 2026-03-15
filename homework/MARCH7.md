@@ -4,7 +4,7 @@
 
 so a graph with $n$ vertices is stored as a flat $n \times n$ adjacency matrix. the entry at position $k = n \cdot i + j + 1$ (1-indexed) tells us whether there's an edge $i \to j$. for example with $n = 3$:
 
-$$\underbrace{a_{00}\ a_{01}\ a_{02}}_{row\ 0}\ \underbrace{a_{10}\ a_{11}\ a_{12}}_{row\ 1}\ \underbrace{a_{20}\ a_{21}\ a_{22}}_{row\ 2}$$
+$\underbrace{a_{00}\ a_{01}\ a_{02}}_{row\ 0}\ \underbrace{a_{10}\ a_{11}\ a_{12}}_{row\ 1}\ \underbrace{a_{20}\ a_{21}\ a_{22}}_{row\ 2}$
 
 we want to check: is there a directed path from vertex $0$ to vertex $n-1$?
 
@@ -32,7 +32,7 @@ if no such $n$ exists (input length is not a perfect square), reject immediately
 
 after the input we write a separator $\#$ followed by $n$ bits representing which vertices are currently known to be reachable. call this the reachability vector $R$:
 
-$$\underbrace{w_1 w_2 \cdots w_{n^2}}_{\text{adjacency matrix}} \# \underbrace{r_0\ r_1\ \cdots\ r_{n-1}}_{\text{reachability vector}}$$
+$\underbrace{w_1 w_2 \cdots w_{n^2}}_{\text{adjacency matrix}} \# \underbrace{r_0\ r_1\ \cdots\ r_{n-1}}_{\text{reachability vector}}$
 
 initialize $R$ to $10\cdots0$ (only vertex $0$ is reachable at the start).
 
@@ -65,7 +65,7 @@ since there are only $n$ vertices, after at most $n$ rounds either we've marked 
 
 the adjacency matrix is:
 
-$$\begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{pmatrix}$$
+$\begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{pmatrix}$
 
 so edges are: $0 \to 1$, $1 \to 2$, $2 \to 0$.
 

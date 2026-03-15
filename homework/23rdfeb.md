@@ -40,9 +40,9 @@ Consider alphabet $\{a,b,c\}$ and the following languages:
 
 Any string in $L_1$ has equal numbers of $a$’s and $b$’s (say $n$) followed by any number of $c$’s. Any string in $L_2$ has any number of $a$’s followed by equal numbers of $b$’s and $c$’s (say $n$). So a string lies in both $L_1$ and $L_2$ iff it has the same number of $a$’s, $b$’s, and $c$’s:
 
-$$
+$
 L_1 \cap L_2 = \{ a^n b^n c^n \mid n \ge 0 \}.
-$$
+$
 
  Hence, although $L_1$ and $L_2$ are context-free, their intersection is not.
 

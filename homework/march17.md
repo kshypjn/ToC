@@ -8,9 +8,7 @@ $K = \{ i \in \mathbb{N} \mid M_i \text{ halts on input } \epsilon \}$
 This is the halting set: the set of indices of TMs that halt on the empty string. It is a standard result that $K$ is undecidable.
 
 Define the language over $\Sigma$:
-$$
-L = \{ a^i \mid i \in K \} = \{ a^i \mid M_i \text{ halts on } \epsilon \}.
-$$
+$L = \{ a^i \mid i \in K \} = \{ a^i \mid M_i \text{ halts on } \epsilon \}$
 
 $L$ is a language over the singleton alphabet $\{a\}$.
 

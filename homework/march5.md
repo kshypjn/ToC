@@ -7,7 +7,7 @@ a perfect square is a number like $0, 1, 4, 9, 16, 25, \ldots$ basically $n = k^
 
 there's a neat trick here. notice that:
 
-$$k^2 = 1 + 3 + 5 + \cdots + (2k-1)$$
+$k^2 = 1 + 3 + 5 + \cdots + (2k-1)$
 
 so $n$ is a perfect square if and only if you can subtract successive odd numbers $1, 3, 5, 7, \ldots$ from $n$ until you hit exactly $0$. if you overshoot (go negative), reject.
 
@@ -20,7 +20,7 @@ for example $n = 7$: $7 - 1 = 6$, $6 - 3 = 3$, $3 - 5 = -2$.  reject.
 
 input is $n$ ones:
 
-$$\underbrace{1\ 1\ 1\ \cdots\ 1}_{n}$$
+$\underbrace{1\ 1\ 1\ \cdots\ 1}_{n}$
 
 we'll cross off ones using $X$. the TM repeatedly removes the next odd number of ones from the remaining block.
 

@@ -9,7 +9,7 @@ a shortlex enumerator $E$ for a language $L \subseteq \Sigma^*$ is a machine tha
 - it eventually prints every string in $L$
 - it prints them in shortlex order, without repeats
 
-$$x_0 <_{\text{sl}} x_1 <_{\text{sl}} x_2 <_{\text{sl}} \cdots$$
+$x_0 <_{\text{sl}} x_1 <_{\text{sl}} x_2 <_{\text{sl}} \cdots$
 
 and $\{x_0, x_1, x_2, \ldots\} = L$.
 
@@ -31,7 +31,7 @@ fix the input $w$.
 
 look at all strings that come before (or equal to) $w$ in shortlex:
 
-$$S = \{x \in \Sigma^\* : x \le_{\text{sl}} w\}.$$
+$S = \{x \in \Sigma^\* : x \le_{\text{sl}} w\}.$
 
 this set is finite, because it’s contained in the set of strings of length $\le |w|$, and there are only finitely many of those.
 

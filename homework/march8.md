@@ -24,7 +24,7 @@ so $U$ semi-decides $H$, which means $H$ is recursively enumerable.
 
 suppose there exists a TM $D$ that decides $H$. so $D$ always halts and:
 
-$$D(\langle M, w \rangle) = \begin{cases} \text{accept} & \text{if } M \text{ halts on } w \\ \text{reject} & \text{if } M \text{ loops on } w \end{cases}$$
+$D(\langle M, w \rangle) = \begin{cases} \text{accept} & \text{if } M \text{ halts on } w \\ \text{reject} & \text{if } M \text{ loops on } w \end{cases}$
 
 ---
 

@@ -49,9 +49,9 @@ $
 where $D$ is either $L$ or $R$, we add production rules that rewrite the configuration string accordingly.
 
 For example, suppose $D = R$, then on a configuration substring $q a c$ (where $c$ is the symbol immediately to the right), the TM writes $b$ and moves right, entering state $p$. We can simulate this with a production
-$$
+$
 q a c \to b p c.
-$$
+$
 Similarly, if $D = L$, we add a rule that moves the state symbol to the left.
 
 We also add rules that:
