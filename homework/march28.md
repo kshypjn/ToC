@@ -1,0 +1,5 @@
+This problem is undecidable. Let $P$ be an arbitrary Python program and $\ell$ a line number. Consider the following: if we could decide, for any $P$ and $\ell$, whether there exists an input $x$ such that running $P$ on $x$ reaches line $\ell$, we could solve the Halting Problem.
+
+Given a program $Q$ and input $y$, construct a new program $P$ that ignores its own input, runs $Q$ on $y$, and if $Q(y)$ halts, executes line $\ell$ (for example, a print statement at line $\ell$). The key point is that $P$ reaches line $\ell$ on some input if and only if $Q(y)$ halts.
+
+If a decider exists for our original problem, then for any $Q$ and $y$, we could determine whether $Q(y)$ halts by applying the decider to $(P, \ell)$. But the Halting Problem is undecidable, so it follows that determining whether there exists any input on which $P$ reaches line $\ell$ is also undecidable.
