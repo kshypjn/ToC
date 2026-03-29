@@ -20,6 +20,3 @@ Alternatively, the reduction can be phrased more simply:
 Given an instance of Hamiltonian Cycle on \( G \), pick any edge \( (u, v) \) in \( G \), and construct \( G' \) by removing that edge. Then, ask whether \( G' \) has a Hamiltonian path from \( u \) to \( v \). \( G \) has a Hamiltonian cycle if and only if \( G' \) has a Hamiltonian path from \( u \) to \( v \).
 
 Since the Hamiltonian Cycle problem is NP-complete, and we can reduce it to the Hamiltonian Path problem in polynomial time, Hamiltonian Path is NP-hard.
-
-**Conclusion:**  
-Hamiltonian Path is both in NP and NP-hard, so it is NP-complete.
