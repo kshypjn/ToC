@@ -1,16 +1,3 @@
-
-Proof:
-
-Let us assume the equation:
-
-$P = NP$
-
-Divide both sides by $P$:
-
-$\frac{P}{P} = \frac{NP}{P}$
-
-Simplify the equation:
-
-$1 = N$
-
-
+$P=0$
+$N = 1$
+$NP = 1.0 = 0 $
