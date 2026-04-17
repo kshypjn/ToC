@@ -1,4 +1,3 @@
-Theorem: $P = NP$
 
 Proof:
 
