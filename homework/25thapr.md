@@ -13,4 +13,4 @@ You can also use diagonalization to construct a function that is not time-constr
 $g(n) = f_n(n) + 1$
 
 
-By diagonalization, $g$ cannot be equal to any $f_i$. Therefore, if $g$ were time-constructible, it would appear on the list, leading to a contradiction.
+By diagonalization, $g$ cannot be equal to any $f_i$. Therefore, if $g$ were time constructible, it would appear on the list, leading to a contradiction.
