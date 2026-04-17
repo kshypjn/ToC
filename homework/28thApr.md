@@ -12,3 +12,5 @@ $\frac{P}{P} = \frac{NP}{P}$
 Simplify the equation:
 
 $1 = N$
+
+
